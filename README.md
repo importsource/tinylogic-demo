@@ -1,1 +1,0 @@
-jar cvf C:\Users\Hezf\Documents\dev\svn\alogic\workspace\tinylogic\target\tinylogic-0.0.1-SNAPSHOT.jar C:\Users\Hezf\Documents\dev\svn\alogic\workspace\tinylogic\target\tinylogic-0.0.1-SNAPSHOT
