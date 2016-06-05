@@ -1,5 +1,6 @@
 package com.tinylogic.demo.service;
 
+import com.importsource.classloader.Person;
 import com.importsource.tinylogic.server.httpserver.annoation.MicroService;
 import com.importsource.tinylogic.server.httpserver.core.Request;
 import com.importsource.tinylogic.server.httpserver.core.Response;
@@ -14,7 +15,9 @@ import com.importsource.tinylogic.server.httpserver.core.impl.DefaultHttpHandler
 public class Hello2 extends DefaultHttpHandler{
 	@Override
 	public void doIt(Request request, Response response) {
-		obj =  "HelloWorld2"; 
+		Person p=new Person();
+		p.name="HelloWorld22222";
+		obj =  p.name;
 	}
 	
 }

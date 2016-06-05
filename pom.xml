@@ -8,12 +8,38 @@
 	<description>tinylogic-demo</description>
 	
 	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.importsource.tinylogic.server.httpserver.TinyHttpServer</mainClass>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>/lib</classpathPrefix>
+						</manifest>
+					</archive>
+					<classesDirectory>
+					</classesDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	
 	
 	<dependencies>
 		<dependency>
 			<groupId>com.importsource.tinylogic</groupId>
 			<artifactId>tinylogic</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+		  <groupId>com.importsource.test</groupId>
+          <artifactId>test-classloader</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
