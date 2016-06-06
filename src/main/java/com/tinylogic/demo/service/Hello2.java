@@ -1,6 +1,8 @@
 package com.tinylogic.demo.service;
 
 import com.importsource.classloader.Person;
+import com.importsource.tinylogic.conf.DefaultProperties;
+import com.importsource.tinylogic.conf.PropertiesTools;
 import com.importsource.tinylogic.server.httpserver.annoation.MicroService;
 import com.importsource.tinylogic.server.httpserver.core.Request;
 import com.importsource.tinylogic.server.httpserver.core.Response;
@@ -17,7 +19,9 @@ public class Hello2 extends DefaultHttpHandler{
 	public void doIt(Request request, Response response) {
 		Person p=new Person();
 		p.name="HelloWorld22222";
-		obj =  p.name;
+		DefaultProperties p1 =DefaultProperties.newInstance();
+		String driverClassName = PropertiesTools.get(p1, "dbcp.driverClassName", null);
+		obj =  driverClassName;
 	}
 	
 }
